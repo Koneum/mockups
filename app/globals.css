@@ -1,8 +1,29 @@
 @import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F0F0F0;
+  --foreground: #080808;
+  --card: #ffffff; /* Slightly lighter than background */
+  --card-foreground: #080808; /* #080808 */
+  --popover: #ffffff;
+  --popover-foreground: #080808;
+  --primary: #d40101; /* #d40101 */
+  --primary-foreground: #efefef; /* #efefef */
+  --secondary: #900c0c; /* Lighter muted background */
+  --secondary-foreground: #080808;
+  --muted: #ffffff; /* Subtle background variation */
+  --muted-foreground: #080808; /* Darker than main text for subtlety */
+  --accent: #900c0c; /* #900c0c */
+  --accent-foreground: #080808;
+  --destructive: #d40101;
+  --destructive-foreground: #080808;
+  --border: #ffffff; /* Subtle border */
+  --input: #ffffff; /* Input background */
+  --ring: #d40101; /* Focus ring */
+  --radius: 0.5rem;
+  
 }
 
 @theme inline {
@@ -10,12 +31,47 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-radius: var(--card-radius);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #130707;
     --foreground: #ededed;
+    --card: #0f0f0f; /* Slightly lighter than background */
+    --card-foreground: #ededed;
+    --popover: #0f0f0f;
+    --popover-foreground: #ededed;
+    --primary: #ff9696; /* #ff9696 */
+    --primary-foreground: #080808; /* #080808 */
+    --secondary: #0f0f0f; /* #900c0c */
+    --secondary-foreground: #ededed;
+    --muted: #0f0f0f; /* Darker muted background */
+    --muted-foreground: #ededed; /* Lighter than main text for subtlety */
+    --accent: #ff9696; /* #ff9696 */
+    --accent-foreground: #080808;
+    --destructive: #900c0c;
+    --destructive-foreground: #ededed;
+    --border: #1a1717; /* Subtle border */
+    --input: #1a1717; /* Input background */
+    --ring: #ff9696; /* Focus ring */
+    --radius: 0.5rem;
   }
 }
 
